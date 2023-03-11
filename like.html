@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="like-btn">Like</button>
+    <span id="like-count">0</span>
+
+      
+<style>
+#like-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#like-count {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+</style>
+<script>
+let count = 0;
+const likeBtn = document.getElementById('like-btn');
+const likeCount = document.getElementById('like-count');
+
+likeBtn.addEventListener('click', () => {
+  count++;
+  likeCount.innerHTML = count;
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashanth's Blog</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Even the strongest defenses can have vulnerabilities</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="view.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Even the strongest defenses can have vulnerabilities</h1>
+        <img src="logo op.png" class="img1">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="container">
+        <h2 class="this">Welcome to my Hacker <span class="port">Portfolio!</span></h2>
+        <p>I am <span class="name">Jashanth</span> and I am currently learing hacking . Check out my projects and skills below and feel free to contact me for any inquiries or project proposals. click <a href="about.html"> <span class="name">HERE</a></span>  to know more about me!</p>
+      </div>
+   </div>
+      
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <h2>PROJECTS</h2>
+        <div class="project-box">
+          <h3>Made a Website for School</h3>
+          <p><a href="https://jashanth.github.io/smpinternationalschool.github.io/" target="_blank">https://jashanth.github.io/smpinternationalschool.github.io/</a></p>
+
+        </div>
+        <div class="project-box">
+          <h3>ROYALTY.ai</h3>
+          <p>ROYALTY.ai is an AI based password cracking tool which makes
+            password cracking faster and easy to operate, ROYALTY.ai is
+            based on Python programming language and it uses a
+            combination of Python libraries and Frameworks.I didn't start this project yet! probably gonna take lifetime to complete this project LOL.</p>
+        </div>
+        <div class="project-box">
+          <h3>Creating a <span class="name">Hacker</span>  Community </h3>
+          <p>it's not a project lol. I just want to make a Hacker's community with my firends!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="container">
+        <h2>Currently Learning</h2>
+        <ul>
+          <li><i class="fas fa-code"></i>Python Language</li>
+          <li><i class="fas fa-shield-alt"></i>Networks & Proxies</li>
+          <li><i class="fas fa-lock"></i>Penetration Testing</li>
+          <li><i class="fas fa-terminal"></i>Password Cracking</li>
+        </ul>
+      </div>
+    </section>
+    <section class="VisitCounter">
+      <div class="view-counter">
+        <img src="eye.png" class="eyeimg">
+        <p class="q1">Website View-Counter<span id="counter" class="counter">0</span></p>
+        <script src="counter.js"></script>
+      </div>      
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 <span class="name">Jashanth_King</span> . All Rights Reserved.</p>
+      </div>
+    </footer>
+	<canvas id="canvas" style="background: #111;"></canvas>
+	<script>
+
+    var cannvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = window.innerWidth;
+    var H = window.innerHeight;
+
+    canvas.width = W;
+    canvas.height = H;
+
+    var fontSize = 16;
+    var columns = Math.floor(W / fontSize);
+    var drops = [];
+    for(var i=0; i<columns; i++){
+        drops.push(0);
+    }
+    var str = "JavaScript Hacking Effect";
+    function draw(){
+        context.fillStyle = "rgba(0,0,0,0.05)";
+        context.fillRect(0, 0, W, H);
+        context.fontSize = "700 " + fontSize + "px";
+        context.fillStyle = "#00cc33";
+        for(var i=0; i<columns; i++){
+            var index = Math.floor(Math.random()*str.length);
+            var x = i * fontSize;
+            var y = drops[i] * fontSize;
+            context.fillText(str[index], x, y);
+            if(y >= canvas.height && Math.random() > 0.99){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+    draw();
+    setInterval(draw, 35);
+</script>
+
+  </body>
+</html>
+
+</body>
+</html>

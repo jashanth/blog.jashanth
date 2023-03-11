@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashanth's Blog</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>About Me</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <section class="projects">
+      <div class="container">
+        <h2></h2>
+        <div class="project-box1">
+          <a href="index.html"><h3 class="middle1">About Me</h3></a>
+          <p class="middle2">I am <span class="name">Jashanth</span>, and I am currently pursuing my second year of intermediate studies. I have always been fascinated by computers and aspire to become an ethical hacker. Unlike many of my peers, I find great pleasure in gaining knowledge about computers, rather than mathematics, physics, or chemistry. I believe that knowledge is power, and learning about technology is essential in this ever-evolving world. Although I may not have a keen interest in traditional studies, my passion for learning about hacking and cybersecurity has led me to develop a great understanding of Python and Kali Linux. I am constantly honing my skills and seeking to improve my knowledge. I believe that the key to success lies in one's talent and skills rather than their academic qualifications.I am determined to grow and succeed in life, and I firmly believe that my passion for computers will enable me to do so. I am committed to my goal of becoming an ethical hacker and aspire to make a name for myself in the field of cybersecurity. With hard work, dedication, and a constant desire to learn, I am confident that I will be able to achieve my goals and make a difference in the world of technology.</p>
+          <button id="like-button" onclick="likeCounter()">Like</button>
+          <span id="like-counter">0</span>
+
+        </div>
+
+<style>
+/* Default styles */
+.project-box1 button {
+  display: block;
+  margin: 0 auto;
+  background-color: #0f0;
+  color: #000;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.project-box1 button:hover {
+  background-color: #090;
+}
+.project-box1 #like-counter {
+  display: block;
+  margin: 0 auto;
+  color: #0f0;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 565px;
+}
+button:disabled {
+  opacity: 65%;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  .project-box1 button {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  .project-box1 #like-counter {
+  padding: 5px 205px;
+  font-size: 18px;
+  display: block; /* Reset display to block */
+  text-align: center; /* Center text within parent container */
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  .project-box1 #like-counter {
+    padding: 5px 150px;
+  }
+}
+}
+</style>
+<script>
+// Retrieve the like count from local storage, or set it to 0 if it's not found
+var likeCount = localStorage.getItem("likeCount") || 0;
+
+// Update the like counter with the initial count
+document.getElementById("like-counter").innerHTML = likeCount;
+
+function likeCounter() {
+  // Increment the like count
+  likeCount++;
+
+  // Update the like counter with the new count
+  document.getElementById("like-counter").innerHTML = likeCount;
+
+  // Store the new count in local storage
+  localStorage.setItem("likeCount", likeCount);
+
+  // Disable the button
+  document.getElementById("like-btn").disabled = true;
+}
+
+</script>
+</section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Jashanth_King. All Rights Reserved.</p>
+      </div>
+    </footer>
+	<canvas id="canvas" style="background: #111;"></canvas>
+	<script>
+
+    var cannvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = window.innerWidth;
+    var H = window.innerHeight;
+
+    canvas.width = W;
+    canvas.height = H;
+
+    var fontSize = 16;
+    var columns = Math.floor(W / fontSize);
+    var drops = [];
+    for(var i=0; i<columns; i++){
+        drops.push(0);
+    }
+    var str = "JavaScript Hacking Effect";
+    function draw(){
+        context.fillStyle = "rgba(0,0,0,0.05)";
+        context.fillRect(0, 0, W, H);
+        context.fontSize = "700 " + fontSize + "px";
+        context.fillStyle = "#00cc33";
+        for(var i=0; i<columns; i++){
+            var index = Math.floor(Math.random()*str.length);
+            var x = i * fontSize;
+            var y = drops[i] * fontSize;
+            context.fillText(str[index], x, y);
+            if(y >= canvas.height && Math.random() > 0.99){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+    draw();
+    setInterval(draw, 35);
+</script>
+
+  </body>
+</html>
+
+</body>
+</html>
